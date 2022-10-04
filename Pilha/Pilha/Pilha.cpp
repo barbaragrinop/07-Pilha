@@ -92,8 +92,18 @@ void push()
 
 void pop()
 {
-
+	if (topo == NULL) {
+		cout << "Pilha vazia" << endl;
+		return;
+	}
 	
+	NO* aux = topo;
+	topo = topo->prox;
+	free(aux);
+
+	if (topo->prox == NULL) {
+		cout << "Elementos eliminados";
+	}
 
 }
 
