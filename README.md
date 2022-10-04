@@ -15,3 +15,5 @@ Faça um fork deste repositorio e realize as seguintes atividades:
 - [ ] Implemente a função POP que deve exibir e remover o ultimo elemento da pilha ou exibir "Pilha Vazia" se não houver nenhum elemento.
 
 
+Barbara Hellen da Silva Pereira 
+barbara.pereira10@fatec.sp.gov.br
