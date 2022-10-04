@@ -62,6 +62,7 @@ void inicializar()
 	// se a lista já possuir elementos
 	// libera a memoria ocupada
 	NO* aux = topo;
+
 	while (aux != NULL) {
 		NO* paraExcluir = aux;
 		aux = aux->prox;
@@ -70,7 +71,6 @@ void inicializar()
 
 	topo = NULL;
 	cout << "Pilha inicializada \n";
-
 }
 
 
@@ -87,7 +87,18 @@ void push()
 	cin >> novo->valor;
 	novo->prox = NULL;
 
+	if (topo == NULL) {
+		topo = novo;
+		cout << "Elemento adicionado com sucesso!\n\n";
+		return;
+	}
+	else {
+		novo->prox = topo;
+		topo = novo;
+		cout << "Elemento adicionado com sucesso!\n\n";
+	}
 
+	
 }
 
 void pop()
@@ -102,8 +113,7 @@ void pop()
 	free(aux);
 
 	if (topo->prox == NULL) {
-		cout << "Elementos eliminados";
+		cout << "Elementos eliminados!";
 	}
-
 }
 
